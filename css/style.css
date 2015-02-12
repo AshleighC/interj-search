@@ -1,10 +1,52 @@
 body {
-  font: 16px 'Roboto', 'Tahoma', sans-serif;
+  width: 330px;
   margin: 16px;
-  width: 300px;
+  background-color: #fcfcfc;
+  color: #333;
 }
 
-h1 {
-  font-size: 24px;
+.center {
   text-align: center;
+}
+
+.title {
+  font: 32px 'Roboto Slab', serif;
+}
+
+.content {
+  font: 16px 'Roboto', sans-serif;
+}
+
+.space {
+  height: 18px;
+}
+
+.large {
+  height: 22px;
+}
+
+.example {
+  color: #888;
+  font-size: 14px;
+  margin: 8px 20px 24px 20px;
+}
+
+.input {
+  width: 150px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.button {
+  display: inline-block;
+  width: 50px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 2px;
+  background-color: #666;
+  color: #fff;
+}
+
+.button:active {
+  background-color: #555;
 }
