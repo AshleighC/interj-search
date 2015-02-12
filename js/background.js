@@ -16,7 +16,9 @@ var countResults = function(queryList, counts) {
   var codeString = 'document.getElementById("resultStats").textContent';
 
   if (length == queryList.length) {
-    console.log(counts);
+    chrome.tabs.create({url: 'results.html'}, function(tab) {
+      chrome.tabs.sendMessage(tab.id, {results: counts});
+    });
   } else {
     chrome.tabs.update({url: queryUrl + queryList[length]}, function() {
       chrome.tabs.executeScript({code: codeString}, function(result) {
@@ -28,7 +30,7 @@ var countResults = function(queryList, counts) {
   }
 }
 
-chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function(message, sender) {
   if (message.word && message.letter) {
     chrome.tabs.create({url: queryUrl}, function() {
       countResults(makeQueryList(message.word, message.letter));
