@@ -9,6 +9,8 @@ $('#go-button').click(function() {
       'word': word,
       'letter': matches[1]
     };
+
+    chrome.runtime.sendMessage(message);
   } else {
     $('#error').show();
   }
