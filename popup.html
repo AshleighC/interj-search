@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Interjective Search</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
@@ -15,19 +14,24 @@
     <div class="space"></div>
 
     <div class="content center">
-      <input type="text" id="word" class="input center">
-      <div class="button center">GO</div>
+      <input type="text" id="word-input" class="input center">
+
+      <div id="go-button" class="button center">GO</div>
+
+      <div id="error" class="subtext">
+        Invalid input. Please try again.
+      </div>
 
       <div class="large space"></div>
 
-      <div class="instructions">
-        Enter your search term with parentheses around the letter you want to repeat.
-      </div>
+      Enter your search term with parentheses around the letter you want to repeat.
 
-      <div class="instructions example">
+      <div id="example" class=" subtext">
         For example, to search for "arrrgh", "arrrrgh", "arrrrrgh", and so on, enter "a(r)gh".
       </div>
     </div>
   </body>
 
+  <script src="js/jquery.js"></script>
+  <script src="js/popup.js"></script>
 </html>

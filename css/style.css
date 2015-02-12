@@ -25,10 +25,9 @@ body {
   height: 22px;
 }
 
-.example {
+.subtext {
   color: #888;
   font-size: 14px;
-  margin: 8px 20px 24px 20px;
 }
 
 .input {
@@ -49,4 +48,14 @@ body {
 
 .button:active {
   background-color: #555;
+}
+
+#example {
+  margin: 8px 20px 24px;
+}
+
+#error {
+  color: #f00;
+  margin: 10px 0px -2px;
+  display: none;
 }
